@@ -1,0 +1,233 @@
+body {
+  background-color: white;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-block: 10px;
+}
+
+.title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  padding-inline: 10%;
+}
+
+.title1 {
+  width: 30%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.title1imgage {
+  width: 50px;
+  height: 50px;
+}
+
+.title2 {
+  width: 60%;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-inline-start: 100px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #0f0e0e; /* Placeholder text color */
+  font-size: 14px; /* Placeholder text font size */
+  opacity: 0.7; /* Placeholder text opacity */
+  font-style: italic; /* Placeholder text italic style */
+  /* Add any other styles you need here */
+}
+
+.hlinebtn {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  margin-inline-start: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #0f0e0e;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.hlinebtn:hover {
+  background: rgb(232, 61, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.intro {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  font-family: 'Georgia', serif; /* Serif font for headings */
+  font-size: 2em; /* Increase font size for prominence */
+  font-weight: bold; /* Make the heading bold */
+  color: #000; /* Black color for the heading */
+  text-align: center; /* Center the heading text */
+  /* Add some padding around the heading */
+  border-bottom: 2px solid #ddd; /* Add a light gray border at the bottom */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.read-more {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .title {
+    padding-inline: 8%;
+  }
+
+  .title2 {
+    margin-left: 30px;
+  }
+
+  input {
+    width: 250px;
+    margin-inline-start: 80px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    padding-inline: 6%;
+    margin-bottom: 10px;
+  }
+  .title1{
+    display: none;
+  }
+
+  .title2 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 250px;
+    margin-inline-start: 60px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    padding-inline: 4%;
+    
+  }
+
+  .title1, .title2 {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  input {
+    width: 200px;
+    margin-inline-start: 30px;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 2%;
+  }
+.title1{
+  display: no;
+}
+  .title1, .title2 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  input {
+    width: 180px;
+    margin-inline-start: 10px;
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}

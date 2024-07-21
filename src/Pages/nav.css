@@ -1,0 +1,81 @@
+/* General styles for the nav element */
+nav {
+  background-color: #282c34; /* Dark background color */
+  padding: 10px 20px; /* Padding around the navigation links */
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center; /* Center the navigation items */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between the navigation links */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  height: 50px;
+  position: sticky; /* Make the nav sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Style for individual links */
+nav a {
+  color: beige; /* Light blue color for the links */
+  text-decoration: none; /* Remove the default underline from links */
+  font-size: 18px; /* Font size for the links */
+  font-weight: 500; /* Slightly bolder font */
+  transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+/* Hover state for links */
+nav a:hover {
+  color: #21a1f1; /* Change color on hover */
+}
+
+/* Active state for links */
+nav a.active {
+  border-bottom: 2px solid #21a1f1; /* Underline the active link */
+  color: #21a1f1; /* Make the active link color consistent */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  nav {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    gap: 15px; /* Reduce gap between links */
+  }
+
+  nav a {
+    font-size: 16px; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 6px 12px; /* Further adjust padding */
+    gap: 10px; /* Reduce gap between links */
+  }
+
+  nav a {
+    font-size: 14px; /* Smaller font size */
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+  padding-left: 0;
+    flex-direction: column; /* Stack the navigation links vertically */
+    height: auto; /* Adjust height for vertical layout */
+  }
+
+  nav a {
+    font-size: 16px; /* Slightly larger font size for better readability */
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 4px 8px; /* Minimal padding for very small screens */
+    gap: 5px; /* Minimal gap between links */
+  }
+
+  nav a {
+    font-size: 14px; /* Smaller font size */
+  }
+}
